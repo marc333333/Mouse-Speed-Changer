@@ -47,7 +47,7 @@ namespace Mouse_Speed_Changer
                 int[] arr = new int[Data.Length - 1];
                 for (int i = 1; i < Data.Length; i++)
                 {
-                    arr[i - 1] = (int)(((float)(Data[i] - Data[i - 1])) * (((float)(arr.Length)) / ((float)i)));
+                    arr[i - 1] = (int)Math.Round(((float)Data[i] / (float)Data[i - 1]));
                 }
                 int sum = 0;
                 foreach (int i in arr)
