@@ -1,0 +1,18 @@
+C:\Users\Marc\Desktop\Mouse Speed Changer\Mouse Speed Changer\bin\Debug\Mouse Speed Changer.exe.config
+C:\Users\Marc\Desktop\Mouse Speed Changer\Mouse Speed Changer\obj\Debug\Mouse Speed Changer.csprojResolveAssemblyReference.cache
+C:\Users\Marc\Desktop\Mouse Speed Changer\Mouse Speed Changer\obj\Debug\Mouse_Speed_Changer.Form1.resources
+C:\Users\Marc\Desktop\Mouse Speed Changer\Mouse Speed Changer\obj\Debug\Mouse_Speed_Changer.Properties.Resources.resources
+C:\Users\Marc\Desktop\Mouse Speed Changer\Mouse Speed Changer\obj\Debug\Mouse Speed Changer.csproj.GenerateResource.Cache
+C:\Users\Marc\Desktop\Mouse Speed Changer\Mouse Speed Changer\bin\Debug\Mouse Speed Changer.exe
+C:\Users\Marc\Desktop\Mouse Speed Changer\Mouse Speed Changer\bin\Debug\Mouse Speed Changer.pdb
+C:\Users\Marc\Desktop\Mouse Speed Changer\Mouse Speed Changer\obj\Debug\Mouse Speed Changer.exe
+C:\Users\Marc\Desktop\Mouse Speed Changer\Mouse Speed Changer\obj\Debug\Mouse Speed Changer.pdb
+C:\Users\Marc\Desktop\ySwBmJ\Mouse Speed Changer\bin\Debug\Mouse Speed Changer.exe.config
+C:\Users\Marc\Desktop\ySwBmJ\Mouse Speed Changer\bin\Debug\Mouse Speed Changer.exe
+C:\Users\Marc\Desktop\ySwBmJ\Mouse Speed Changer\bin\Debug\Mouse Speed Changer.pdb
+C:\Users\Marc\Desktop\ySwBmJ\Mouse Speed Changer\obj\Debug\Mouse Speed Changer.csprojResolveAssemblyReference.cache
+C:\Users\Marc\Desktop\ySwBmJ\Mouse Speed Changer\obj\Debug\Mouse_Speed_Changer.Form1.resources
+C:\Users\Marc\Desktop\ySwBmJ\Mouse Speed Changer\obj\Debug\Mouse_Speed_Changer.Properties.Resources.resources
+C:\Users\Marc\Desktop\ySwBmJ\Mouse Speed Changer\obj\Debug\Mouse Speed Changer.csproj.GenerateResource.Cache
+C:\Users\Marc\Desktop\ySwBmJ\Mouse Speed Changer\obj\Debug\Mouse Speed Changer.exe
+C:\Users\Marc\Desktop\ySwBmJ\Mouse Speed Changer\obj\Debug\Mouse Speed Changer.pdb
