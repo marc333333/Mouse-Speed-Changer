@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+using System.IO;
 using System.Runtime.InteropServices;
+using System.Windows.Forms;
 
 namespace Mouse_Speed_Changer
 {
@@ -32,6 +27,7 @@ namespace Mouse_Speed_Changer
             this.Width = recScreen.Width;
             recScreen.Width -= 2;
 
+            BeginningMouseSpeed = SystemInformation.MouseSpeed;
             SetMouseSpeed(1);
 
             Running = false;
@@ -42,12 +38,12 @@ namespace Mouse_Speed_Changer
 
         private void Form1_Click(object sender, EventArgs e)
         {
-            if (CurrentMouseSpeed >= 20 && !Running)
+            if (CurrentMouseSpeed >= Data.Length && !Running)
             {
                 int[] arr = new int[Data.Length - 1];
                 for (int i = 1; i < Data.Length; i++)
                 {
-                    arr[i - 1] = (int)Math.Round(((float)Data[i] / (float)Data[i - 1]));
+                    arr[i - 1] = (int)Math.Round(((double)(Data[i] - Data[i - 1])) * (((double)(arr.Length)) / ((double)i)));
                 }
                 int sum = 0;
                 foreach (int i in arr)
@@ -55,7 +51,31 @@ namespace Mouse_Speed_Changer
                     sum += i;
                 }
                 int avg = sum / (arr.Length);
-                MessageBox.Show(avg.ToString());
+                if (File.Exists("config"))
+                {
+                    SetMouseSpeed(BeginningMouseSpeed);
+                    StreamReader sr = new StreamReader("config");
+                    double sen = 0d;
+                    double.TryParse(sr.ReadLine(), out sen);
+                    int speed = 0;
+                    int.TryParse(sr.ReadLine(), out speed);
+                    sr.Close();
+
+                    int newSpeed = (int)Math.Round((sen * (double)speed) / avg);
+                    SetMouseSpeed(newSpeed);
+                    BeginningMouseSpeed = newSpeed;
+                    MessageBox.Show(string.Format("Mouse speed set to {0}", newSpeed.ToString()));
+                }
+                else
+                {
+                    SetMouseSpeed(BeginningMouseSpeed);
+                    StreamWriter sw = new StreamWriter("config");
+                    sw.WriteLine(avg.ToString());
+                    sw.WriteLine(BeginningMouseSpeed.ToString());
+                    sw.Close();
+                    MessageBox.Show("New config saved");
+                }
+                this.Close();
             }
             else
             {
@@ -102,5 +122,12 @@ namespace Mouse_Speed_Changer
         int Time;
         int CurrentMouseSpeed;
         int[] Data;
+
+        int BeginningMouseSpeed;
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            SetMouseSpeed(BeginningMouseSpeed);
+        }
     }
 }
